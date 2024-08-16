@@ -31,11 +31,20 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .service-details {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
+        .form-group {
             margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
         .cta-button {
             display: inline-block;
@@ -45,6 +54,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            margin-top: 20px;
         }
         .cta-button:hover {
             background-color: #c0392b;
@@ -65,28 +75,26 @@
 <body>
 
 <header>
-    <h1>Создать Цифровой Мемориал</h1>
-    <p>Создайте вечную память о ваших близких</p>
+    <h1>Создать Мемориал</h1>
+    <p>Заполните форму для создания цифрового мемориала.</p>
 </header>
 
 <div class="container">
-    <div class="service-details">
-        <h3>Мемориал 1</h3>
-        <p>Создание цифрового мемориала с уникальными особенностями.</p>
-        <a href="#" class="cta-button">Подробнее</a>
-    </div>
-
-    <div class="service-details">
-        <h3>Мемориал 2</h3>
-        <p>Создание цифрового мемориала с возможностью добавления воспоминаний и медиа.</p>
-        <a href="#" class="cta-button">Подробнее</a>
-    </div>
-
-    <div class="service-details">
-        <h3>Мемориал 3</h3>
-        <p>Создание мемориала с интеграцией в социальные сети и доступом для близких.</p>
-        <a href="#" class="cta-button">Подробнее</a>
-    </div>
+    <form>
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Введите имя">
+        </div>
+        <div class="form-group">
+            <label for="description">Описание</label>
+            <textarea id="description" name="description" rows="5" placeholder="Введите описание"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="photo">Фото</label>
+            <input type="file" id="photo" name="photo">
+        </div>
+        <a href="#" class="cta-button">Создать Мемориал</a>
+    </form>
 </div>
 
 <footer>
